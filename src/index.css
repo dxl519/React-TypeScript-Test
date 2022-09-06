@@ -1,0 +1,14 @@
+.container {
+    padding: 100px 0;
+}
+
+.todo-container {
+    width: 50%;
+    height: 100%;
+    margin: 0 auto;
+
+}
+
+.todo-container>h3 {
+    text-align: center;
+}
