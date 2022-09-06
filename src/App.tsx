@@ -61,7 +61,9 @@ function App() {
     <div className="container">
       <div className="todo-container">
         <h3>TodoMVC</h3>
-        <button onClick={handleClickAllSelect}>全选</button>
+        <button className="btn" onClick={handleClickAllSelect}>
+          全选
+        </button>
         <TodoForm handleClickTodo={handleClickTodo}></TodoForm>
         <div className="todo-list">
           {todos.map((todo, index) => {

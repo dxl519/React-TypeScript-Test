@@ -70,7 +70,9 @@ export const Todo: React.FC<TodoProps> = ({
         </span>
       )}
 
-      <button onClick={() => clickDelete(index)}>删除</button>
+      <button className="btn-delete " onClick={() => clickDelete(index)}>
+        删除
+      </button>
     </div>
   );
 };

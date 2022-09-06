@@ -2,6 +2,22 @@
     padding: 100px 0;
 }
 
+button {
+    border: 0;
+    cursor: pointer;
+    padding: 4px 20px;
+    color: var(--color-white);
+    border-radius: 4px;
+}
+
+.btn {
+    background-color: var(--bg-color);
+}
+
+.btn-delete {
+    background-color: var(--error-color);
+}
+
 .todo-container {
     width: 50%;
     height: 100%;
@@ -13,6 +29,11 @@
     text-align: center;
 }
 
+.todo-list {
+    display: grid;
+    gap: 20px;
+}
+
 .todo-item {
     display: flex;
     justify-content: space-between;
@@ -20,4 +41,16 @@
 
 .todo-text {
     word-break: break-all;
+}
+
+.todo-form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.todo-form>input {
+    width: 80%;
+    height: 20px;
 }

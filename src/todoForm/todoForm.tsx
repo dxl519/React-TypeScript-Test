@@ -28,14 +28,16 @@ export const TodoForm: React.FC<TodoFormProps> = ({ handleClickTodo }) => {
   };
 
   return (
-    <div>
+    <div className="todo-form">
       <input
         type="text"
         value={value}
         onKeyDown={handleKeyDown}
         onChange={handleChangeValue}
       />
-      <button onClick={handleClickSumbit}>提交</button>
+      <button className="btn" onClick={handleClickSumbit}>
+        提交
+      </button>
     </div>
   );
 };
