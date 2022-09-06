@@ -5,7 +5,8 @@ export type Todos = {
 
 export type TodoProps = {
   todo: Todos;
-  index: number | string;
+  index: number;
+  changeChecked: (index: number) => void;
 };
 
 export type TodoFormProps = {

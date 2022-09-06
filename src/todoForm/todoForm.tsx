@@ -4,6 +4,7 @@ import { TodoFormProps } from "../type";
 export const TodoForm: React.FC<TodoFormProps> = ({ handleClickTodo }) => {
   const [value, setValue] = useState<string>("");
 
+  // 提交
   const handleClickSumbit = (): void => {
     if (value === "") return alert("输入内容不能为空");
 
@@ -12,12 +13,14 @@ export const TodoForm: React.FC<TodoFormProps> = ({ handleClickTodo }) => {
     setValue("");
   };
 
+  // 监听键盘按下回车
   const handleKeyDown = (event: React.KeyboardEvent<Element>): void => {
     if (event.keyCode === 13) {
       handleClickSumbit();
     }
   };
 
+  // 获取 input 输入值
   const handleChangeValue: React.ChangeEventHandler<HTMLInputElement> = (
     event
   ): void => {
