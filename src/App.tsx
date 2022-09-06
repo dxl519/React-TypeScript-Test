@@ -48,6 +48,15 @@ function App() {
     setTodos(newTodos);
   };
 
+  // 删除
+  const handleClickDelete = (index: number): void => {
+    const newTodos = [...todos];
+
+    newTodos.splice(index, 1);
+
+    setTodos(newTodos);
+  };
+
   return (
     <div className="container">
       <div className="todo-container">
@@ -62,6 +71,7 @@ function App() {
                 todo={todo}
                 index={index}
                 changeChecked={handleChangeChecked}
+                clickDelete={handleClickDelete}
               />
             );
           })}

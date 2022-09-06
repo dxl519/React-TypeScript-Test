@@ -7,6 +7,7 @@ export type TodoProps = {
   todo: Todos;
   index: number;
   changeChecked: (index: number) => void;
+  clickDelete: (index: number) => void;
 };
 
 export type TodoFormProps = {
