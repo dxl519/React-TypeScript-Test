@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import { Todos } from "./type";
 import { Todo } from "./todo";
 import { TodoForm } from "./todoForm";
@@ -49,13 +49,14 @@ function App() {
   };
 
   // 删除
-  const handleClickDelete = (index: number): void => {
-    const newTodos = [...todos];
-
-    newTodos.splice(index, 1);
-
-    setTodos(newTodos);
-  };
+  const handleClickDelete = useCallback(
+    (index: number): void => {
+      const newTodos = [...todos];
+      newTodos.splice(index, 1);
+      setTodos(newTodos);
+    },
+    [todos]
+  );
 
   return (
     <div className="container">
