@@ -1,7 +1,7 @@
 import { useCallback, useState } from "react";
-import { Todos } from "./type";
-import { Todo } from "./todo";
-import { TodoForm } from "./todoForm";
+import { Todos } from "./models/type";
+import { Todo } from "./views/todo";
+import { TodoForm } from "./views/todoForm";
 
 import "./index.css";
 

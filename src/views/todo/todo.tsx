@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { TodoProps } from "../type";
+import { TodoProps } from "../../models/type";
 
 export const Todo: React.FC<TodoProps> = ({
   todo,

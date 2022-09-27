@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { TodoFormProps } from "../type";
+import { TodoFormProps } from "../../models/type";
 
 export const TodoForm: React.FC<TodoFormProps> = ({ handleClickTodo }) => {
   const [value, setValue] = useState<string>("");
