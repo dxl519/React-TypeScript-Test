@@ -54,3 +54,13 @@ button {
     width: 80%;
     height: 20px;
 }
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-list {
+    display: flex;
+    justify-content: center;
+}

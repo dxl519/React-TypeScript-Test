@@ -37,8 +37,8 @@ export const Todo: React.FC<TodoProps> = ({
   };
 
   // 键盘按下回车
-  const hadnleKeyDown = (event: React.KeyboardEvent<Element>): void => {
-    if (event.keyCode === 13) {
+  const handleKeyDown = (event: React.KeyboardEvent<Element>): void => {
+    if (event.key === "Enter") {
       todo.text = editValue;
       setIsEdit(false);
       setEditValue("");
@@ -58,7 +58,7 @@ export const Todo: React.FC<TodoProps> = ({
           value={editValue}
           onBlur={handleBlurValue}
           onChange={handleChangeValue}
-          onKeyDown={hadnleKeyDown}
+          onKeyDown={handleKeyDown}
         />
       ) : (
         <span

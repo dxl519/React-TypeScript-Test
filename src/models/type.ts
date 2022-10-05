@@ -13,3 +13,12 @@ export type TodoProps = {
 export type TodoFormProps = {
   handleClickTodo: (text: string) => void;
 };
+
+export type FooterProps = {
+  amount: number;
+};
+
+export type FooterList = {
+  id: number;
+  text: string;
+};

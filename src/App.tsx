@@ -4,6 +4,7 @@ import { Todo } from "./views/todo";
 import { TodoForm } from "./views/todoForm";
 
 import "./index.css";
+import { Footer } from "./views/footer";
 
 function App() {
   // 初始化 Todos[] 列表
@@ -24,16 +25,16 @@ function App() {
 
   // 全选
   const handleClickAllSelect = (): void => {
-    let newisCompleted = false;
+    let newIsCompleted = false;
 
     const newTodos = [...todos];
 
     newTodos.forEach((todo) => {
-      if (todo.isCompleted === false) return (newisCompleted = true);
+      if (todo.isCompleted === false) return (newIsCompleted = true);
     });
 
     newTodos.map((todo) => {
-      todo.isCompleted = newisCompleted;
+      todo.isCompleted = newIsCompleted;
     });
 
     setTodos(newTodos);
@@ -79,6 +80,7 @@ function App() {
             );
           })}
         </div>
+        <Footer amount={todos.length ?? 0} />
       </div>
     </div>
   );

@@ -5,8 +5,10 @@ export const TodoForm: React.FC<TodoFormProps> = ({ handleClickTodo }) => {
   const [value, setValue] = useState<string>("");
 
   // 提交
-  const handleClickSumbit = (): void => {
-    if (value === "") return alert("输入内容不能为空");
+  const handleClickSubmit = (): void => {
+    if (value === "") {
+      return alert("输入内容不能为空");
+    }
 
     handleClickTodo(value);
 
@@ -15,8 +17,8 @@ export const TodoForm: React.FC<TodoFormProps> = ({ handleClickTodo }) => {
 
   // 监听键盘按下回车
   const handleKeyDown = (event: React.KeyboardEvent<Element>): void => {
-    if (event.keyCode === 13) {
-      handleClickSumbit();
+    if (event.key === "Enter") {
+      handleClickSubmit();
     }
   };
 
@@ -35,7 +37,7 @@ export const TodoForm: React.FC<TodoFormProps> = ({ handleClickTodo }) => {
         onKeyDown={handleKeyDown}
         onChange={handleChangeValue}
       />
-      <button className="btn" onClick={handleClickSumbit}>
+      <button className="btn" onClick={handleClickSubmit}>
         提交
       </button>
     </div>
